@@ -20,7 +20,29 @@
 
 	<hr>
 
-	<h2>My Project Quick Links:</h2>
+	<h2>Local interface</h2>
+
+	<div class='cloud_check'>
+		<b><em>Monitor Cloud:</em></b>
+
+	<div type="cloud_check" cloud_compare="equal" cloud_action="run_slot">
+			<input type=text id="cloud_name" value="command">
+			<input type=text id="cloud_value" value="Forwards">
+			<input type=text id="cloud_action_val" value="0">
+	</div>
+
+	<div type="cloud_check" cloud_compare="equal" cloud_action="run_slot">
+		<input type=text id="cloud_name" value="command">
+		<input type=text id="cloud_value" value="Backwards">
+		<input type=text id="cloud_action_val" value="1">
+	</div>
+
+	<div type="cloud_check" cloud_compare="equal" cloud_action="stop_slot">
+		<input type=text id="cloud_name" value="command">
+		<input type=text id="cloud_value" value="Stop">
+
+</div>
+
   <p>
     <ul>
       <li><a href="./myProject_remote.html" target=_blank>My Project Remote Page</a></li>
