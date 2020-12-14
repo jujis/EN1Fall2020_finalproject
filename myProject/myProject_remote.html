@@ -22,9 +22,14 @@
 	<button cloud_action='update' cloud_name 'command'>Forwards</button>
 	<button cloud_action='update' cloud_name 'command'>Backwards</buttons>
 	<button cloud_action='update' cloud_name 'command'>Stop</button>
-	<button cloud_action='update' cloud_name 'command'>Left</button>
-	<button cloud_action='update' cloud_name 'command'>Right</button>
 
+	<p> Set horizontal angle
+		<input type=range cloud_action='update' cloud_name='position_horizontal' cloud_min='0' cloud_max='359' min='0' max='359' value='0'>
+	</p>
+
+	<p> Set vertical angle
+		<input type=range cloud_action='update' cloud_name='position_vertical'cloud_min='0' cloud_max='359' min='0' max='359' value='0'>
+	</p>
 
 </body>
 </html>
