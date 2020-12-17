@@ -17,12 +17,14 @@ https://www.w3schools.com/css/default.asp
     /*Give your button block some style!
     Add color, change the border, and
     change the size using CSS styling*/
-    background-color:lightblue;
+    background-color:#028A0F;
     border:solid;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 40px;
     width:30%;
+    cursor: pointer;
+    display: inline-block;
 }
 
 .sliderBlock{
