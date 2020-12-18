@@ -20,86 +20,30 @@
 
 	<h2>Local Interface</h2>
 
-	<div class="cloud check">
+	<div class="cloud_check">
 		<b><em>Monitor Cloud:</em></b>
 
-		<div type="cloud check" cloud_compare="equal" cloud_action="download_code">
-			<input type=text id="cloud name" value="command">
+	  <div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
+			<input type=text id="cloud_name" value="command">
 			<input type=text id="cloud_value" value="Forwards">
-			<input type=text id="cloud_action_val" value="1">
+      <input type=text id="cloud_action_val" value="0">
 			<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
 from spike import PrimeHub, Motor
-from spike.control import wait_for_seconds, wait_until, Timer
+from spike.control import wait_for_seconds
 
-# horizontal position on Motor C:
-motorC = Motor('C')
-motorC.run_to_position(CLOUD[position_horizontal], 'shortest path', 15)
-
-# vertical position on Motor E:
-motorE = Motor('E')
-MotorE.run_to_position(CLOUD[position_vertical], 'shortest path', 15)
-
-# movement of Motor F:
-motorF = Motor ('F')
-motorF.start(20)
-wait_for_seconds(1)
-motorC.stop()
-motorE.stop()
-motorF.stop()</textarea>
-			<input type=text id="cloud reset" value="">
-		</div>
-
-		 <div type="cloud check" cloud_compare="equal" cloud_action="download code">
-			<input type=text id="cloud name" value="command">
-			<input type=text id="cloud_value" value="Backwards">
-			<input type=text id="cloud_action_val" value="0">
-			<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
-from spike import PrimeHub, Motor
-from spike.control import wait_for_seconds, wait_until, Timer
-
-# horizontal position on Motor C:
-motorC = Motor('C')
-motorC.run_to_position(CLOUD[position_horizontal], 'shortest path', 15)
-
-# vertical position on Motor E:
-motorE = Motor('E')
-motorE.run_to_position(CLOUD[position_vertical], 'shortest path', 15)
-
-# movement of Motor F:
-motorF = Motor('F')
-motorF.start(20)
-wait_for_seconds(1)
-motorC.stop()
-motorE.stop()
-motorF.stop()</textarea>
-			<input type=text id="cloud reset" value="">
-		</div>
-
-		<div type="cloud check" cloud_compare="equal" cloud_action="download code">
-			<input type=text id="cloud name" value="command">
-			<input type=text id="cloud_value" value="Start">
-			<input type=text id="cloud_action_val" value="0">
-			<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
-from spike import PrimeHub, Motor
-from spike.control import wait_for_seconds, wait_until, Timer
-
-# horizontal position on Motor C:
-motorC = Motor('C')
-motorC.run_to_position(CLOUD[position_horizontal], 'shortest path', 15)
-
-# vertical position on Motor E:
-motorE = Motor('E')
-motorE.run_to_position(CLOUD[position_vertical], 'shortest path', 15)
-
-# movement of Motor F:
-motorF = Motor('F')
-motorF.start(20)
-wait_for_seconds(1)
-motorC.stop()
-motorE.stop()
-motorF.stop()</textarea>
-			<input type=text id="cloud reset" value="">
-		</div>
+# horizontal position on Motor A:
+h_motor = Motor('A')
+h_motor.run_to_position(CLOUD[position_horizontal],'shortest path',20)
+# vertical position on Motor B:
+v_motor = Motor('B')
+v_motor.run_to_position(CLOUD[position_vertical],'shortest path',20)
+# shooter on Motor C:
+s_motor = Motor('C')
+s_motor.start(100)
+wait_for_seconds(2)
+s_motor.stop()</textarea>
+			<input type=text id="cloud_reset" value="">
+    </div>
 
 	</div>
 </body>
